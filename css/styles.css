@@ -1,1 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4B0082;
+    color: #FFFFFF;
+    text-align: center;
+}
 
+.container {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #800080;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.actions button {
+    background-color: #9400D3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #FFFFFF;
+    text-align: center;
+}
+
+button {
+    background-color: #FF4500;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+
+    .popup {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
