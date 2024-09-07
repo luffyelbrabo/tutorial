@@ -4,33 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel do Administrador</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Arquivo CSS -->
 </head>
 <body>
     <div class="container">
         <h1>Painel do Administrador</h1>
         <p>Bem-vindo, administrador! Use o painel abaixo para gerenciar os aplicativos disponíveis para download.</p>
-
-        <div class="actions">
-            <button onclick="goHome()">Ir para Home</button>
-            <button onclick="showPopup()">Upload de App</button>
-            <button onclick="generateHash()">BRABOX Hash</button>
-            <button onclick="logout()">Sair</button>
-        </div>
-
-        <!-- Formulário Pop-up para adicionar ou atualizar aplicativos -->
-        <div id="uploadPopup" class="popup" style="display: none;">
+        <button onclick="goToHome()">Ir para Home</button>
+        <button onclick="showUploadPopup()">Upload de App</button>
+        <button onclick="showBRABOXPopup()">BRABOX Hash</button>
+        <button onclick="logout()">Sair</button>
+        
+        <div id="uploadPopup" class="popup">
             <form>
                 <input type="text" placeholder="Nome do Aplicativo" id="appName">
                 <input type="text" placeholder="Link para Download" id="appLink">
                 <button type="button" onclick="addOrUpdateApp()">Adicionar/Atualizar Aplicativo</button>
-                <button type="button" onclick="closePopup()">Fechar</button> <!-- Botão Fechar -->
             </form>
         </div>
 
-        <!-- Tabela para exibir aplicativos -->
         <h2>Aplicativos Disponíveis:</h2>
-        <table id="appTable">
+        <table>
             <thead>
                 <tr>
                     <th>Nome do Aplicativo</th>
@@ -38,12 +32,12 @@
                     <th>Ações</th>
                 </tr>
             </thead>
-            <tbody>
-                <!-- Os aplicativos serão adicionados dinamicamente aqui -->
+            <tbody id="appTable">
+                <!-- Apps serão carregados aqui -->
             </tbody>
         </table>
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="scripts.js"></script> <!-- Arquivo JavaScript -->
 </body>
 </html>
